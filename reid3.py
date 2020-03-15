@@ -24,7 +24,7 @@ class Videoreid:
         filename=os.path.splitext(base)[0]
         out=cv2.VideoWriter('../Output_Videos/'+filename+'.webm',fourcc,fps,(frame_width,frame_height))
         videoOn=True
-        past_ppl='../Identity_Gallery/rock2'
+        past_ppl='../Identity_Gallery/rock4'
         while(videoOn):
             ret, frame=cap.read()
             if(ret == False):
@@ -35,9 +35,13 @@ class Videoreid:
             for j in range(len(img_human)):
                 arr.append(self.find(img_human[j],past_ppl))
             frame=self.draw_boxes(frame,img_location,arr) 
+            cv2.imshow('Video', frame)
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
             out.write(frame)
         cap.release()
         out.release()
+        cv2.destroyAllWindows()
         print('end') 
         return 'F://Output_Videos//'+filename+'.webm'
     
