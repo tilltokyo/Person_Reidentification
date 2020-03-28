@@ -1,8 +1,9 @@
 # Person Re-identification for Video Surveillance
 
-@article{HermansBeyer2017Arxiv,
-  title       = {{In Defense of the Triplet Loss for Person Re-Identification}},
-  author      = {Hermans*, Alexander and Beyer*, Lucas and Leibe, Bastian},
-  journal     = {arXiv preprint arXiv:1703.07737},
-  year        = {2017}
-}
+### Python package (Python 3.5 or Python3.6)
+1. Tensorflow 1.8 
+2. opencv 3.3 (Need opencv dnn library)
+3. Numpy
+
+## Acknowledgement and reference
+1. https://github.com/cftang0827/pedestrian_recognition
