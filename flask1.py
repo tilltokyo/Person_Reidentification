@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request 
 from flask_cors import CORS, cross_origin
-import reid2
+import reid3
 
 app = Flask(__name__) 
 cors = CORS(app) 
@@ -11,7 +11,8 @@ def reid():
     if(request.method == 'GET'): 
       videopath = request.args.get('videopath')
       print('started')
-      return reid2.video_reid(videopath)
+      object=reid3.Videoreid()
+      return object.video_reid(videopath)
       
         
 
